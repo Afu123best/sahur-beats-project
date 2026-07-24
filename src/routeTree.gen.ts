@@ -10,11 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as PatientRouteImport } from './routes/patient'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as DonateRouteImport } from './routes/donate'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CareersRouteImport } from './routes/careers'
+import { Route as BookAppointmentRouteImport } from './routes/book-appointment'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DoctorsIndexRouteImport } from './routes/doctors.index'
@@ -25,6 +27,11 @@ import { Route as DepartmentsSlugRouteImport } from './routes/departments.$slug'
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PatientRoute = PatientRouteImport.update({
+  id: '/patient',
+  path: '/patient',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NewsRoute = NewsRouteImport.update({
@@ -50,6 +57,11 @@ const ContactRoute = ContactRouteImport.update({
 const CareersRoute = CareersRouteImport.update({
   id: '/careers',
   path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookAppointmentRoute = BookAppointmentRouteImport.update({
+  id: '/book-appointment',
+  path: '/book-appointment',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -86,11 +98,13 @@ const DepartmentsSlugRoute = DepartmentsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/book-appointment': typeof BookAppointmentRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/donate': typeof DonateRoute
   '/education': typeof EducationRoute
   '/news': typeof NewsRoute
+  '/patient': typeof PatientRoute
   '/services': typeof ServicesRoute
   '/departments/$slug': typeof DepartmentsSlugRoute
   '/doctors/$id': typeof DoctorsIdRoute
@@ -100,11 +114,13 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/book-appointment': typeof BookAppointmentRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/donate': typeof DonateRoute
   '/education': typeof EducationRoute
   '/news': typeof NewsRoute
+  '/patient': typeof PatientRoute
   '/services': typeof ServicesRoute
   '/departments/$slug': typeof DepartmentsSlugRoute
   '/doctors/$id': typeof DoctorsIdRoute
@@ -115,11 +131,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/book-appointment': typeof BookAppointmentRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/donate': typeof DonateRoute
   '/education': typeof EducationRoute
   '/news': typeof NewsRoute
+  '/patient': typeof PatientRoute
   '/services': typeof ServicesRoute
   '/departments/$slug': typeof DepartmentsSlugRoute
   '/doctors/$id': typeof DoctorsIdRoute
@@ -131,11 +149,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/book-appointment'
     | '/careers'
     | '/contact'
     | '/donate'
     | '/education'
     | '/news'
+    | '/patient'
     | '/services'
     | '/departments/$slug'
     | '/doctors/$id'
@@ -145,11 +165,13 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/book-appointment'
     | '/careers'
     | '/contact'
     | '/donate'
     | '/education'
     | '/news'
+    | '/patient'
     | '/services'
     | '/departments/$slug'
     | '/doctors/$id'
@@ -159,11 +181,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/book-appointment'
     | '/careers'
     | '/contact'
     | '/donate'
     | '/education'
     | '/news'
+    | '/patient'
     | '/services'
     | '/departments/$slug'
     | '/doctors/$id'
@@ -174,11 +198,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BookAppointmentRoute: typeof BookAppointmentRoute
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
   DonateRoute: typeof DonateRoute
   EducationRoute: typeof EducationRoute
   NewsRoute: typeof NewsRoute
+  PatientRoute: typeof PatientRoute
   ServicesRoute: typeof ServicesRoute
   DepartmentsSlugRoute: typeof DepartmentsSlugRoute
   DoctorsIdRoute: typeof DoctorsIdRoute
@@ -193,6 +219,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/patient': {
+      id: '/patient'
+      path: '/patient'
+      fullPath: '/patient'
+      preLoaderRoute: typeof PatientRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/news': {
@@ -228,6 +261,13 @@ declare module '@tanstack/react-router' {
       path: '/careers'
       fullPath: '/careers'
       preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-appointment': {
+      id: '/book-appointment'
+      path: '/book-appointment'
+      fullPath: '/book-appointment'
+      preLoaderRoute: typeof BookAppointmentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -278,11 +318,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BookAppointmentRoute: BookAppointmentRoute,
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
   DonateRoute: DonateRoute,
   EducationRoute: EducationRoute,
   NewsRoute: NewsRoute,
+  PatientRoute: PatientRoute,
   ServicesRoute: ServicesRoute,
   DepartmentsSlugRoute: DepartmentsSlugRoute,
   DoctorsIdRoute: DoctorsIdRoute,
