@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2.5">
             <div className="grid h-10 w-10 place-items-center rounded-xl gradient-brand text-primary-foreground">
-              <HeartPulse className="h-5 w-5" />
+              <img src="/logo.png" alt="Gulab Devi Teaching Hospital" className="h-11 w-11" />
             </div>
             <div>
               <div className="font-display font-bold">Gulab Devi</div>

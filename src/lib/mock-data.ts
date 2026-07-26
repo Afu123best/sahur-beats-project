@@ -1,7 +1,7 @@
 export const HOSPITAL = {
   name: "Gulab Devi Teaching Hospital",
   short: "GDTH",
-  tagline: "Non-Government, Not-For-Profit, Charity-Based hospital serving Pakistan since 1934.",
+  tagline: "A non-profit hospital serving Pakistan since 1934.",
   phone: "+92-42-99230247-50",
   emergency: "1122",
   email: "info@gulabdevi.org",

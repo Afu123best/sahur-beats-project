@@ -31,7 +31,7 @@ function Donate() {
   const [amount, setAmount] = useState(5000);
   return (
     <PublicLayout>
-      <PageHeader breadcrumb="Zakat · Sadqah · Donations" title="Your gift saves lives." subtitle="Gulab Devi is a Non-Government, Not-For-Profit, Charity-Based hospital. Your Zakat and Donations enable free and highly subsidised treatment for deserving patients." />
+      <PageHeader breadcrumb="Zakat · Sadqah · Donations" title="Your gift saves lives." subtitle="Gulab Devi is a non-profit hospital. Your Zakat and Donations enable free and highly subsidised treatment for deserving patients." />
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="mb-10 grid gap-3 sm:grid-cols-3">
           {[

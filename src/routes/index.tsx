@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Gulab Devi Teaching Hospital — Give Your Zakat & Donations to Save Lives" },
-      { name: "description", content: "Non-Government, Not-For-Profit, Charity-Based teaching hospital in Lahore. Your Zakat and donations fund free treatment for thousands." },
+      { name: "description", content: "Non-profit teaching hospital in Lahore. Your Zakat and donations fund free treatment for thousands." },
       { property: "og:title", content: "Gulab Devi Teaching Hospital" },
       { property: "og:description", content: "Give your Zakat, Sadqah and donations to help save lives." },
       { property: "og:type", content: "website" },
@@ -73,7 +73,7 @@ function Home() {
         <div className="mx-auto flex min-h-[78vh] max-w-5xl flex-col items-center justify-center px-6 py-24 text-center text-white">
           <div className="text-sm font-semibold uppercase tracking-[0.3em] text-white/80">{HOSPITAL.name}</div>
           <h1 className="mt-6 font-display text-3xl font-extrabold uppercase leading-tight tracking-tight md:text-5xl lg:text-6xl">
-            Non-Government, Not-For-Profit,<br />Charity-Based
+            Non-Profit Hospital
           </h1>
           <p className="mt-6 max-w-2xl text-base text-white/90 md:text-lg">
             For over 90 years, treating the deserving and non-affording — supported entirely by your Zakat, Sadqah and Donations.
