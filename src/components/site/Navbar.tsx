@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, Phone, Search, Moon, Sun, HeartPulse } from "lucide-react";
+import { Menu, Phone, Search, Moon, Sun, HeartPulse, Mail, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -20,11 +20,11 @@ const NAV = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [dark, setDark] = useState(() => {
-  if (typeof window === "undefined") return false;
-  const saved = localStorage.getItem("theme");
-  if (saved) return saved === "dark";
-  return window.matchMedia("(prefers-color-scheme: dark)").matches;
-});
+    if (typeof window === "undefined") return false;
+    const saved = localStorage.getItem("theme");
+    if (saved) return saved === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -34,9 +34,9 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-  document.documentElement.classList.toggle("dark", dark);
-  localStorage.setItem("theme", dark ? "dark" : "light");
-}, [dark]);
+    document.documentElement.classList.toggle("dark", dark);
+    localStorage.setItem("theme", dark ? "dark" : "light");
+  }, [dark]);
 
   return (
     <header
@@ -53,6 +53,15 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <span className="inline-flex items-center gap-1.5"><Phone className="h-3 w-3" /> Emergency: {HOSPITAL.emergency}</span>
             <span className="opacity-80">Helpline: {HOSPITAL.phone}</span>
+            <span className="inline-flex items-center gap-1.5"><Mail className="h-3 w-3" /> {HOSPITAL.email}</span>
+            <a
+              href="https://www.google.com/maps/place/Gulab+Devi+Teaching+Hospital/@31.483076,74.3397872,17z/data=!3m1!4b1!4m6!3m5!1s0x3919042455725773:0xcc1a7d86b720625e!8m2!3d31.4830715!4d74.3423621!16s%2Fm%2F0qsc3_z?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 hover:underline"
+            >
+              <MapPin className="h-3 w-3" /> Get Directions
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <Link to="/patient/dashboard" className="hover:underline">Patient Portal</Link>
