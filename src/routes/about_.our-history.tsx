@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PublicLayout, PageHeader } from "@/components/site/PublicLayout";
 import { TIMELINE } from "@/lib/mock-data";
 
-export const Route = createFileRoute("/about/our-history")({
+export const Route = createFileRoute("/about_/our-history")({
   head: () => ({ meta: [{ title: "Our History — Gulab Devi Teaching Hospital" }] }),
   component: OurHistory,
 });

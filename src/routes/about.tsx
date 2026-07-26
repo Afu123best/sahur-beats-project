@@ -1,11 +1,19 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PublicLayout } from "@/components/site/PublicLayout";
 import { Card, CardContent } from "@/components/ui/card";
-import { Telescope, BookOpen, Users, ArrowRight } from "lucide-react";
+import { Telescope, BookOpen, Users, ArrowRight, MapPin, Building2, Stethoscope, GraduationCap, HeartHandshake } from "lucide-react";
 
 const FOUNDER_IMG = "/lala-lajpat-rai.jpg";
 const HERO_IMG = "/gulab-devi-building.jpg";
 const HISTORY_IMG = "/slab-image.jpg";
+const OVERVIEW = [
+  { icon: MapPin, label: "Location", text: "Ferozepur Road, Lahore, Punjab, Pakistan" },
+  { icon: Building2, label: "Hospital Type", text: "Semi-private, tertiary care chest & cardiac hospital" },
+  { icon: Stethoscope, label: "Capacity", text: "1,500 beds — the largest chest hospital in South Asia" },
+  { icon: GraduationCap, label: "Teaching", text: "Affiliated with Fatima Jinnah Medical College; home to Al-Aleem Medical College" },
+  { icon: HeartHandshake, label: "Funding Model", text: "Non-profit, sustained by Zakat, Sadqah and public donations" },
+  { icon: Users, label: "Departments", text: "25+ specialized departments spanning cardiac, pulmonary and general care" },
+];
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -81,6 +89,29 @@ function About() {
               Lajpat Rai did not live to see his hospital fully realized — he passed away in 1928, a year after founding the Trust. But his vision, born from personal loss, continues to guide the institution today: care for those who need it most, regardless of ability to pay.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* AT A GLANCE */}
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="text-center">
+          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">At A Glance</div>
+          <h2 className="mt-3 font-display text-2xl font-bold md:text-3xl">A century-old institution, still growing</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            Gulab Devi Teaching Hospital has evolved from a 50-bed tuberculosis sanatorium into a comprehensive teaching hospital and medical education ecosystem, offering everything from emergency care to advanced cardiac surgery, largely free or subsidised for those who cannot otherwise afford it.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {OVERVIEW.map((o) => (
+            <div key={o.label} className="rounded-2xl border bg-card p-6">
+              <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/10 text-primary">
+                <o.icon className="h-5 w-5" />
+              </div>
+              <div className="mt-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">{o.label}</div>
+              <p className="mt-1 font-medium leading-snug">{o.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 

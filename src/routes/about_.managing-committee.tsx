@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { LEADERSHIP } from "@/lib/mock-data";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-export const Route = createFileRoute("/about/managing-committee")({
+export const Route = createFileRoute("/about_/managing-committee")({
   head: () => ({ meta: [{ title: "Managing Committee — Gulab Devi Teaching Hospital" }] }),
   component: ManagingCommittee,
 });
