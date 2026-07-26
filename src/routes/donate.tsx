@@ -9,10 +9,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const IMPACT = [
-  { icon: Heart, k: "2.4M+", v: "Patients treated" },
-  { icon: HandHeart, k: "60%", v: "Free care provided" },
-  { icon: Users, k: "3,200+", v: "Staff supported" },
-  { icon: Building2, k: "42", v: "Departments funded" },
+  { icon: Heart, k: "15M+", v: "Patients treated" },
+  { icon: HandHeart, k: "90%", v: "Free care provided" },
+  { icon: Users, k: "1,000+", v: "Staff supported" },
+  { icon: Building2, k: "25", v: "Departments funded" },
 ];
 
 const AMOUNTS = [1000, 5000, 10000, 25000, 50000, 100000];

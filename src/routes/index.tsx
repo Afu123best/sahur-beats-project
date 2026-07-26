@@ -21,15 +21,15 @@ const IMG = {
 };
 
 const IMPACT = [
-  { k: 1200, s: "", label: "Bed Strength" },
-  { k: 296000, s: "+", label: "Bed Occupancy" },
-  { k: 350000, s: "+", label: "Outdoor Patients" },
-  { k: 70000, s: "+", label: "Emergency Treatments" },
-  { k: 150000, s: "+", label: "Radiology Procedures" },
-  { k: 50000, s: "+", label: "Cardiology Procedures" },
-  { k: 1000, s: "+", label: "Cath Lab Procedures" },
-  { k: 50000, s: "+", label: "Surgeries & Procedures" },
-  { k: 478000, s: "+", label: "Laboratory Tests" },
+  { k: 1500, s: "", label: "Bed Strength" },
+  { k: 396000, s: "+", label: "Bed Occupancy" },
+  { k: 417000, s: "+", label: "Outdoor Patients" },
+  { k: 77000, s: "+", label: "Emergency Treatments" },
+  { k: 199000, s: "+", label: "Radiology Procedures" },
+  { k: 94000, s: "+", label: "Cardiology Procedures" },
+  { k: 2000, s: "+", label: "Cath Lab Procedures" },
+  { k: 99000, s: "+", label: "Surgeries & Procedures" },
+  { k: 578000, s: "+", label: "Laboratory Tests" },
 ];
 
 const DEPTS = [
