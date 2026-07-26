@@ -39,14 +39,14 @@ function Stories() {
       </section>
 
       <Dialog open={!!active} onOpenChange={(open) => !open && setActive(null)}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto">
           {active && (
             <>
               <DialogTitle className="font-display text-xl">{active.title}</DialogTitle>
               <div className="mt-2 aspect-[16/10] overflow-hidden rounded-xl bg-muted">
                 <img src={active.image} alt={active.title} className="h-full w-full object-cover" />
               </div>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{active.fullText}</p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground whitespaced-pre-line">{active.fullText}</p>
             </>
           )}
         </DialogContent>
