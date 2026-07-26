@@ -38,10 +38,10 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="font-display text-sm font-semibold">Patients</h4>
+          <h4 className="font-display text-sm font-semibold">Support Us</h4>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            {[["/book-appointment","Book Appointment"],["/patient/dashboard","Patient Portal"],["/news","News & Media"],["/careers","Careers"],["/donate","Donate"]].map(([to,label]) => (
-              <li key={to}><Link to={to as string} className="hover:text-primary">{label}</Link></li>
+            {[["/donate","Donate Us"],["/donate","Give Zakat"],["/donate","Sadqah"],["/careers","Careers"],["/news","Stories"]].map(([to,label], i) => (
+              <li key={i}><Link to={to as string} className="hover:text-primary">{label}</Link></li>
             ))}
           </ul>
         </div>
