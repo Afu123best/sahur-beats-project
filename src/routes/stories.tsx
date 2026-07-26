@@ -27,7 +27,7 @@ function Stories() {
               className="group overflow-hidden rounded-2xl border bg-card text-left transition-all hover:-translate-y-1 hover:shadow-elegant"
             >
               <div className="aspect-[16/10] overflow-hidden bg-muted">
-                <img src={s.image} alt={s.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={s.image} alt={s.title} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
               </div>
               <div className="p-5">
                 <h3 className="font-display text-lg font-semibold leading-snug">{s.title}</h3>
@@ -44,9 +44,9 @@ function Stories() {
             <>
               <DialogTitle className="font-display text-xl">{active.title}</DialogTitle>
               <div className="mt-2 aspect-[16/10] overflow-hidden rounded-xl bg-muted">
-                <img src={active.image} alt={active.title} className="h-full w-full object-cover" />
+                <img src={active.image} alt={active.title} className="h-full w-full object-cover object-top" />
               </div>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground whitespaced-pre-line">{active.fullText}</p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground whitespace-pre-line">{active.fullText}</p>
             </>
           )}
         </DialogContent>
