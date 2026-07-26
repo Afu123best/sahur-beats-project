@@ -11,6 +11,7 @@ const NAV = [
   { to: "/about", label: "About Us" },
   { to: "/departments", label: "Departments" },
   { to: "/donate", label: "For Donors" },
+  { to: "/stories", label: "Stories" },
   { to: "/education", label: "Our Institutions" },
   { to: "/news", label: "News" },
   { to: "/contact", label: "Contact" },

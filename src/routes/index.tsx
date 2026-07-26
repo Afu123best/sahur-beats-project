@@ -90,7 +90,7 @@ function Home() {
       </section>
 
       {/* DONATION CALL BAND */}
-      <section className="bg-white py-20">
+      <section className="bg-background py-20">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <h2 className="font-display text-2xl font-extrabold uppercase leading-tight text-red-600 md:text-4xl">
             Give Your Zakat, Sadqah and Donations to Gulab Devi Teaching Hospital — Help Save Lives
@@ -229,7 +229,7 @@ function Home() {
           </blockquote>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" variant="outline" className="rounded-none border-white bg-transparent px-10 text-white hover:bg-white hover:text-primary">
-              <Link to="/news">View All Stories</Link>
+              <Link to="/stories">View All Stories</Link>
             </Button>
             <Button asChild size="lg" className="rounded-none bg-red-600 px-10 hover:bg-red-700">
               <Link to="/donate"><Heart className="mr-2 h-4 w-4" />Donate Now</Link>

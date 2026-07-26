@@ -20,6 +20,7 @@ import { Route as EducationRouteImport } from './routes/education'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as PatientRouteImport } from './routes/patient'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as StoriesRouteImport } from './routes/stories'
 import { Route as AdminAppointmentsRouteImport } from './routes/admin.appointments'
 import { Route as AdminBillingRouteImport } from './routes/admin.billing'
 import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
@@ -102,6 +103,11 @@ const PatientRoute = PatientRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoriesRoute = StoriesRouteImport.update({
+  id: '/stories',
+  path: '/stories',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminAppointmentsRoute = AdminAppointmentsRouteImport.update({
@@ -257,6 +263,7 @@ export interface FileRoutesByFullPath {
   '/news': typeof NewsRoute
   '/patient': typeof PatientRouteWithChildren
   '/services': typeof ServicesRoute
+  '/stories': typeof StoriesRoute
   '/admin/appointments': typeof AdminAppointmentsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -298,6 +305,7 @@ export interface FileRoutesByTo {
   '/news': typeof NewsRoute
   '/patient': typeof PatientRouteWithChildren
   '/services': typeof ServicesRoute
+  '/stories': typeof StoriesRoute
   '/admin/appointments': typeof AdminAppointmentsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -340,6 +348,7 @@ export interface FileRoutesById {
   '/news': typeof NewsRoute
   '/patient': typeof PatientRouteWithChildren
   '/services': typeof ServicesRoute
+  '/stories': typeof StoriesRoute
   '/admin/appointments': typeof AdminAppointmentsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -383,6 +392,7 @@ export interface FileRouteTypes {
     | '/news'
     | '/patient'
     | '/services'
+    | '/stories'
     | '/admin/appointments'
     | '/admin/billing'
     | '/admin/dashboard'
@@ -424,6 +434,7 @@ export interface FileRouteTypes {
     | '/news'
     | '/patient'
     | '/services'
+    | '/stories'
     | '/admin/appointments'
     | '/admin/billing'
     | '/admin/dashboard'
@@ -465,6 +476,7 @@ export interface FileRouteTypes {
     | '/news'
     | '/patient'
     | '/services'
+    | '/stories'
     | '/admin/appointments'
     | '/admin/billing'
     | '/admin/dashboard'
@@ -507,6 +519,7 @@ export interface RootRouteChildren {
   NewsRoute: typeof NewsRoute
   PatientRoute: typeof PatientRouteWithChildren
   ServicesRoute: typeof ServicesRoute
+  StoriesRoute: typeof StoriesRoute
   DepartmentsSlugRoute: typeof DepartmentsSlugRoute
   DoctorsIdRoute: typeof DoctorsIdRoute
   DepartmentsIndexRoute: typeof DepartmentsIndexRoute
@@ -590,6 +603,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stories': {
+      id: '/stories'
+      path: '/stories'
+      fullPath: '/stories'
+      preLoaderRoute: typeof StoriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/appointments': {
@@ -868,6 +888,7 @@ const rootRouteChildren: RootRouteChildren = {
   NewsRoute: NewsRoute,
   PatientRoute: PatientRouteWithChildren,
   ServicesRoute: ServicesRoute,
+  StoriesRoute: StoriesRoute,
   DepartmentsSlugRoute: DepartmentsSlugRoute,
   DoctorsIdRoute: DoctorsIdRoute,
   DepartmentsIndexRoute: DepartmentsIndexRoute,
