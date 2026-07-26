@@ -8,13 +8,11 @@ import { cn } from "@/lib/utils";
 
 const NAV = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
+  { to: "/about", label: "About Us" },
   { to: "/departments", label: "Departments" },
-  { to: "/doctors", label: "Doctors" },
-  { to: "/services", label: "Services" },
-  { to: "/education", label: "Education" },
+  { to: "/donate", label: "For Donors" },
+  { to: "/education", label: "Our Institutions" },
   { to: "/news", label: "News" },
-  { to: "/careers", label: "Careers" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -87,11 +85,8 @@ export function Navbar() {
           <Button variant="ghost" size="icon" aria-label="Toggle theme" onClick={() => setDark((d) => !d)}>
             {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
-          <Button asChild variant="outline" className="hidden md:inline-flex">
-            <Link to="/donate">Donate</Link>
-          </Button>
-          <Button asChild className="hidden sm:inline-flex bg-primary hover:bg-primary/90">
-            <Link to="/book-appointment">Book Appointment</Link>
+          <Button asChild className="hidden sm:inline-flex rounded-none bg-red-600 font-semibold uppercase tracking-wider hover:bg-red-700">
+            <Link to="/donate">Donate Us</Link>
           </Button>
 
           <Sheet>

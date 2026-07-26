@@ -31,8 +31,19 @@ function Donate() {
   const [amount, setAmount] = useState(5000);
   return (
     <PublicLayout>
-      <PageHeader breadcrumb="Support us" title="Your gift saves lives." subtitle="Every rupee helps us provide free and subsidised treatment to those who need it most." />
+      <PageHeader breadcrumb="Zakat · Sadqah · Donations" title="Your gift saves lives." subtitle="Gulab Devi is a Non-Government, Not-For-Profit, Charity-Based hospital. Your Zakat and Donations enable free and highly subsidised treatment for deserving patients." />
       <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mb-10 grid gap-3 sm:grid-cols-3">
+          {[
+            "https://gulabdevi.org/wp-content/uploads/2025/12/Cath-Lab-1.jpg",
+            "https://gulabdevi.org/wp-content/uploads/2026/01/CS-OT-1-1.jpg",
+            "https://gulabdevi.org/wp-content/uploads/2026/01/ameer-din.jpg",
+          ].map((src) => (
+            <div key={src} className="aspect-[4/3] overflow-hidden rounded-lg shadow-soft">
+              <img src={src} alt="Hospital care" className="h-full w-full object-cover" />
+            </div>
+          ))}
+        </div>
         <div className="mb-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {IMPACT.map((i) => (
             <Card key={i.v} className="border-0 shadow-soft"><CardContent className="p-6 text-center">

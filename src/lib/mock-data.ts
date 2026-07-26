@@ -1,11 +1,11 @@
 export const HOSPITAL = {
   name: "Gulab Devi Teaching Hospital",
   short: "GDTH",
-  tagline: "Compassionate care. World-class expertise. Since 1934.",
-  phone: "+92 42 111 000 111",
+  tagline: "Non-Government, Not-For-Profit, Charity-Based hospital serving Pakistan since 1934.",
+  phone: "+92-42-99230247-50",
   emergency: "1122",
   email: "info@gulabdevi.org",
-  address: "Ferozepur Road, Lahore, Punjab, Pakistan",
+  address: "Main Ferozepur Road, Opposite Arfa Kareem Tower, Lahore, Punjab, Pakistan",
 };
 
 export const STATS = [
