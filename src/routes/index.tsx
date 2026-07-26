@@ -225,7 +225,7 @@ function Home() {
         <div className="mx-auto max-w-4xl px-6 py-24 text-center text-white">
           <Quote className="mx-auto h-10 w-10 text-white/50" />
           <blockquote className="mt-6 font-display text-2xl italic leading-relaxed md:text-3xl">
-            "My children don't need my money, why shouldn't it be used for a more noble cause?"
+          "Doctor Sahib, I have children at home. I found two hours of labor work this morning and only now could I come after securing a simple meal for them."
           </blockquote>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" variant="outline" className="rounded-none border-white bg-transparent px-10 text-white hover:bg-white hover:text-primary">
