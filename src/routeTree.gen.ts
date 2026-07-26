@@ -21,6 +21,9 @@ import { Route as NewsRouteImport } from './routes/news'
 import { Route as PatientRouteImport } from './routes/patient'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as StoriesRouteImport } from './routes/stories'
+import { Route as AboutManagingCommitteeRouteImport } from './routes/about.managing-committee'
+import { Route as AboutOurHistoryRouteImport } from './routes/about.our-history'
+import { Route as AboutVisionMissionRouteImport } from './routes/about.vision-mission'
 import { Route as AdminAppointmentsRouteImport } from './routes/admin.appointments'
 import { Route as AdminBillingRouteImport } from './routes/admin.billing'
 import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
@@ -109,6 +112,21 @@ const StoriesRoute = StoriesRouteImport.update({
   id: '/stories',
   path: '/stories',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AboutManagingCommitteeRoute = AboutManagingCommitteeRouteImport.update({
+  id: '/managing-committee',
+  path: '/managing-committee',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutOurHistoryRoute = AboutOurHistoryRouteImport.update({
+  id: '/our-history',
+  path: '/our-history',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutVisionMissionRoute = AboutVisionMissionRouteImport.update({
+  id: '/vision-mission',
+  path: '/vision-mission',
+  getParentRoute: () => AboutRoute,
 } as any)
 const AdminAppointmentsRoute = AdminAppointmentsRouteImport.update({
   id: '/appointments',
@@ -253,7 +271,7 @@ const PatientSettingsRoute = PatientSettingsRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/about': typeof AboutRouteWithChildren
   '/admin': typeof AdminRouteWithChildren
   '/book-appointment': typeof BookAppointmentRoute
   '/careers': typeof CareersRoute
@@ -264,6 +282,9 @@ export interface FileRoutesByFullPath {
   '/patient': typeof PatientRouteWithChildren
   '/services': typeof ServicesRoute
   '/stories': typeof StoriesRoute
+  '/about/managing-committee': typeof AboutManagingCommitteeRoute
+  '/about/our-history': typeof AboutOurHistoryRoute
+  '/about/vision-mission': typeof AboutVisionMissionRoute
   '/admin/appointments': typeof AdminAppointmentsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -295,7 +316,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/about': typeof AboutRouteWithChildren
   '/admin': typeof AdminRouteWithChildren
   '/book-appointment': typeof BookAppointmentRoute
   '/careers': typeof CareersRoute
@@ -306,6 +327,9 @@ export interface FileRoutesByTo {
   '/patient': typeof PatientRouteWithChildren
   '/services': typeof ServicesRoute
   '/stories': typeof StoriesRoute
+  '/about/managing-committee': typeof AboutManagingCommitteeRoute
+  '/about/our-history': typeof AboutOurHistoryRoute
+  '/about/vision-mission': typeof AboutVisionMissionRoute
   '/admin/appointments': typeof AdminAppointmentsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -338,7 +362,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/about': typeof AboutRouteWithChildren
   '/admin': typeof AdminRouteWithChildren
   '/book-appointment': typeof BookAppointmentRoute
   '/careers': typeof CareersRoute
@@ -349,6 +373,9 @@ export interface FileRoutesById {
   '/patient': typeof PatientRouteWithChildren
   '/services': typeof ServicesRoute
   '/stories': typeof StoriesRoute
+  '/about/managing-committee': typeof AboutManagingCommitteeRoute
+  '/about/our-history': typeof AboutOurHistoryRoute
+  '/about/vision-mission': typeof AboutVisionMissionRoute
   '/admin/appointments': typeof AdminAppointmentsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -393,6 +420,9 @@ export interface FileRouteTypes {
     | '/patient'
     | '/services'
     | '/stories'
+    | '/about/managing-committee'
+    | '/about/our-history'
+    | '/about/vision-mission'
     | '/admin/appointments'
     | '/admin/billing'
     | '/admin/dashboard'
@@ -435,6 +465,9 @@ export interface FileRouteTypes {
     | '/patient'
     | '/services'
     | '/stories'
+    | '/about/managing-committee'
+    | '/about/our-history'
+    | '/about/vision-mission'
     | '/admin/appointments'
     | '/admin/billing'
     | '/admin/dashboard'
@@ -477,6 +510,9 @@ export interface FileRouteTypes {
     | '/patient'
     | '/services'
     | '/stories'
+    | '/about/managing-committee'
+    | '/about/our-history'
+    | '/about/vision-mission'
     | '/admin/appointments'
     | '/admin/billing'
     | '/admin/dashboard'
@@ -509,7 +545,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
+  AboutRoute: typeof AboutRouteWithChildren
   AdminRoute: typeof AdminRouteWithChildren
   BookAppointmentRoute: typeof BookAppointmentRoute
   CareersRoute: typeof CareersRoute
@@ -611,6 +647,27 @@ declare module '@tanstack/react-router' {
       fullPath: '/stories'
       preLoaderRoute: typeof StoriesRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/about/managing-committee': {
+      id: '/about/managing-committee'
+      path: '/managing-committee'
+      fullPath: '/about/managing-committee'
+      preLoaderRoute: typeof AboutManagingCommitteeRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/our-history': {
+      id: '/about/our-history'
+      path: '/our-history'
+      fullPath: '/about/our-history'
+      preLoaderRoute: typeof AboutOurHistoryRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/vision-mission': {
+      id: '/about/vision-mission'
+      path: '/vision-mission'
+      fullPath: '/about/vision-mission'
+      preLoaderRoute: typeof AboutVisionMissionRouteImport
+      parentRoute: typeof AboutRoute
     }
     '/admin/appointments': {
       id: '/admin/appointments'
@@ -811,6 +868,20 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AboutRouteChildren {
+  AboutManagingCommitteeRoute: typeof AboutManagingCommitteeRoute
+  AboutOurHistoryRoute: typeof AboutOurHistoryRoute
+  AboutVisionMissionRoute: typeof AboutVisionMissionRoute
+}
+
+const AboutRouteChildren: AboutRouteChildren = {
+  AboutManagingCommitteeRoute: AboutManagingCommitteeRoute,
+  AboutOurHistoryRoute: AboutOurHistoryRoute,
+  AboutVisionMissionRoute: AboutVisionMissionRoute,
+}
+
+const AboutRouteWithChildren = AboutRoute._addFileChildren(AboutRouteChildren)
+
 interface AdminRouteChildren {
   AdminAppointmentsRoute: typeof AdminAppointmentsRoute
   AdminBillingRoute: typeof AdminBillingRoute
@@ -878,7 +949,7 @@ const PatientRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
+  AboutRoute: AboutRouteWithChildren,
   AdminRoute: AdminRouteWithChildren,
   BookAppointmentRoute: BookAppointmentRoute,
   CareersRoute: CareersRoute,

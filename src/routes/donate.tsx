@@ -2,11 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PublicLayout, PageHeader } from "@/components/site/PublicLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, HandHeart, Users, Building2 } from "lucide-react";
-import { useState } from "react";
-import { toast } from "sonner";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Heart, HandHeart, Users, Building2, Landmark, Wallet, HandCoins } from "lucide-react";
 
 const IMPACT = [
   { icon: Heart, k: "15M+", v: "Patients treated" },
@@ -15,20 +11,20 @@ const IMPACT = [
   { icon: Building2, k: "25", v: "Departments funded" },
 ];
 
-const AMOUNTS = [1000, 5000, 10000, 25000, 50000, 100000];
 
 export const Route = createFileRoute("/donate")({
-  head: () => ({ meta: [
-    { title: "Donate — Gulab Devi Teaching Hospital" },
-    { name: "description", content: "Your donation funds subsidised treatment for thousands of families each year." },
-    { property: "og:title", content: "Donate to Gulab Devi" },
-    { property: "og:description", content: "Support life-saving healthcare." },
-  ]}),
+  head: () => ({
+    meta: [
+      { title: "Donate — Gulab Devi Teaching Hospital" },
+      { name: "description", content: "Your donation funds subsidised treatment for thousands of families each year." },
+      { property: "og:title", content: "Donate to Gulab Devi" },
+      { property: "og:description", content: "Support life-saving healthcare." },
+    ]
+  }),
   component: Donate,
 });
 
 function Donate() {
-  const [amount, setAmount] = useState(5000);
   return (
     <PublicLayout>
       <PageHeader breadcrumb="Zakat · Sadqah · Donations" title="Your gift saves lives." subtitle="Gulab Devi is a non-profit hospital. Your Zakat and Donations enable free and highly subsidised treatment for deserving patients." />
@@ -56,21 +52,43 @@ function Donate() {
 
         <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
           <Card className="border-0 shadow-elegant"><CardContent className="p-8">
-            <h2 className="font-display text-2xl font-bold">Choose an amount</h2>
-            <p className="mt-1 text-sm text-muted-foreground">Zakat and tax-eligible donations accepted.</p>
-            <div className="mt-6 grid grid-cols-3 gap-3">
-              {AMOUNTS.map((a) => (
-                <button key={a} type="button" onClick={() => setAmount(a)} className={`rounded-xl border p-4 text-center font-display font-semibold transition-all ${amount === a ? "border-primary bg-primary/10 text-primary" : "hover:border-primary/40"}`}>
-                  PKR {a.toLocaleString()}
-                </button>
-              ))}
+            <h2 className="font-display text-2xl font-bold">Bank Account Details</h2>
+            <p className="mt-1 text-sm text-muted-foreground">MCB Gulab Devi Hospital Branch, Ferozpur Road Lahore</p>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-xl border p-5">
+                <div className="flex items-center gap-2">
+                  <img src="/mcb-logo-Photoroom.png" alt="MCB Bank" className="h-8 w-auto object-contain" />
+                  <div className="text-xs uppercase tracking-widest text-muted-foreground">Zakat Account No.</div>
+                </div>
+                <div className="mt-2 font-display text-lg font-semibold">01008-0101-0002144</div>
+              </div>
+              <div className="rounded-xl border p-5">
+                <div className="flex items-center gap-2">
+                  <img src="/mcb-logo-Photoroom.png" alt="MCB Bank" className="h-8 w-auto object-contain" />
+                  <div className="text-xs uppercase tracking-widest text-muted-foreground">Donation Account No.</div>
+                </div>
+                <div className="mt-2 font-display text-lg font-semibold">01008-0101-0000024</div>
+              </div>
             </div>
-            <div className="mt-6"><Label>Custom amount (PKR)</Label><Input type="number" value={amount} onChange={(e) => setAmount(Number(e.target.value) || 0)} /></div>
-            <div className="mt-4 grid grid-cols-2 gap-3">
-              <div><Label>Full name</Label><Input placeholder="Your name" /></div>
-              <div><Label>Email</Label><Input type="email" placeholder="you@example.com" /></div>
+
+            <div className="mt-8 grid gap-5 sm:grid-cols-3">
+              <div className="rounded-xl border p-5 text-center">
+                <div className="mx-auto grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary"><Landmark className="h-5 w-5" /></div>
+                <h3 className="mt-3 font-semibold">Bank Transfer</h3>
+                <p className="mt-1 text-xs text-muted-foreground">Deposit directly via online funds transfer or through any bank in Pakistan.</p>
+              </div>
+              <div className="rounded-xl border p-5 text-center">
+                <div className="mx-auto grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary"><Wallet className="h-5 w-5" /></div>
+                <h3 className="mt-3 font-semibold">Mobile Wallet</h3>
+                <p className="mt-1 text-xs text-muted-foreground">Use JazzCash, EasyPaisa or UPaisa to contribute to Gulab Devi Teaching Hospital.</p>
+              </div>
+              <div className="rounded-xl border p-5 text-center">
+                <div className="mx-auto grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary"><HandCoins className="h-5 w-5" /></div>
+                <h3 className="mt-3 font-semibold">Pay In Cash/By Cheque</h3>
+                <p className="mt-1 text-xs text-muted-foreground">Deposit in cash or by cheque at the account office of Gulab Devi Teaching Hospital.</p>
+              </div>
             </div>
-            <Button className="mt-6 w-full" size="lg" onClick={() => toast.success(`Thank you! PKR ${amount.toLocaleString()} donation initiated.`)}>Donate PKR {amount.toLocaleString()}</Button>
           </CardContent></Card>
 
           <div className="rounded-2xl gradient-brand p-8 text-primary-foreground shadow-elegant">

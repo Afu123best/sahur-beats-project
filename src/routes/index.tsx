@@ -121,7 +121,7 @@ function Home() {
               </blockquote>
               <div className="mt-6 border-l-4 border-primary pl-4">
                 <div className="font-display text-lg font-bold">Quaid-e-Azam Muhammad Ali Jinnah</div>
-                <div className="text-sm text-muted-foreground">November 6, 1947</div>
+                <div className="text-sm text-muted-foreground">6/11/47</div>
               </div>
               <Button asChild variant="outline" className="mt-8 rounded-none">
                 <Link to="/about">Our History <ArrowRight className="ml-2 h-4 w-4" /></Link>

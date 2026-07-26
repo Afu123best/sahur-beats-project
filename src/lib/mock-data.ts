@@ -147,20 +147,20 @@ export const JOBS = [
 ];
 
 export const TIMELINE = [
-  { year: 1934, title: "Founded as a TB sanatorium", desc: "Established to combat tuberculosis in the region." },
-  { year: 1958, title: "First expansion", desc: "Grew to 300 beds and added general medicine." },
-  { year: 1974, title: "Chest Diseases Institute", desc: "Recognised as a national centre for chest medicine." },
-  { year: 1998, title: "Postgraduate Medical Institute", desc: "Began FCPS training programs." },
-  { year: 2010, title: "Teaching Hospital status", desc: "Affiliated with Gulab Devi Educational Complex." },
-  { year: 2022, title: "Cardiac Institute inaugurated", desc: "Advanced interventional cardiology services launched." },
-  { year: 2026, title: "Digital Hospital initiative", desc: "Unified EMR and patient portal go live." },
+  { year: 1927, title: "Gulab Devi Trust established", desc: "Founded by Lala Lajpat Rai in memory of his mother, who died of tuberculosis." },
+  { year: 1930, title: "Land acquired", desc: "40 acres purchased by the Trust, plus 10 acres granted by the Punjab Government." },
+  { year: 1934, title: "Hospital opens", desc: "Inaugurated by Mahatma Gandhi on July 17, 1934, treating TB patients." },
+  { year: 1947, title: "Refugee care during Partition", desc: "The hospital, with 50 beds, treated refugees arriving near the railway station." },
+  { year: 1948, title: "New Managing Committee", desc: "Begum Raana Liaquat Ali Khan appointed chairperson after trustee migration." },
+  { year: 1984, title: "Cardiac wing established", desc: "Marked the beginning of open-heart and cardiac surgery services." },
+  { year: 2026, title: "1,500-bed hospital", desc: "Now the largest chest hospital in South Asia." },
 ];
 
 export const LEADERSHIP = [
-  { name: "Prof. Dr. Aslam Ch.", role: "Chief Executive", photo: PHOTOS[0] },
-  { name: "Dr. Sadaf Iqbal", role: "Medical Director", photo: PHOTOS[2] },
-  { name: "Mr. Kamran Ali", role: "Chief Operating Officer", photo: PHOTOS[3] },
-  { name: "Prof. Rukhsana", role: "Dean of Medical College", photo: PHOTOS[5] },
+  { name: "Syed Shahid Ali", role: "Chairman", photo: PHOTOS[0] },
+  { name: "Mr. Ahmad Hasnain", role: "Honorary Secretary", photo: PHOTOS[1] },
+  { name: "Ms. Sidra Fatima Sheikh", role: "Member", photo: PHOTOS[2] },
+  { name: "Mr. Bilal Ilahi", role: "Member", photo: PHOTOS[3] },
 ];
 
 // Patient portal mock data
