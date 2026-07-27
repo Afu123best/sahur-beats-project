@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { HeartPulse, Facebook, Twitter, Instagram, Youtube, Phone, Mail, MapPin } from "lucide-react";
+import { HeartPulse, Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from "lucide-react";
 import { HOSPITAL } from "@/lib/mock-data";
 
 export function Footer() {
@@ -20,8 +20,19 @@ export function Footer() {
             {HOSPITAL.tagline}
           </p>
           <div className="mt-5 flex gap-3">
-            {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
-              <a key={i} href="#" aria-label="Social link" className="grid h-9 w-9 place-items-center rounded-full border transition-colors hover:bg-primary hover:text-primary-foreground">
+            {[
+              { Icon: Facebook, href: "https://www.facebook.com/GulabDeviTeachingHospitalOfficial/", label: "Facebook" },
+              { Icon: Instagram, href: "https://www.instagram.com/gulabdeviteachinghospital/", label: "Instagram" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/company/gulab-devi-teaching-hospital/", label: "LinkedIn" },
+            ].map(({ Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="grid h-9 w-9 place-items-center rounded-full border transition-colors hover:bg-primary hover:text-primary-foreground"
+              >
                 <Icon className="h-4 w-4" />
               </a>
             ))}
@@ -31,7 +42,7 @@ export function Footer() {
         <div>
           <h4 className="font-display text-sm font-semibold">Explore</h4>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            {[["/about","About"],["/departments","Departments"],["/doctors","Doctors"],["/services","Services"],["/education","Education"]].map(([to,label]) => (
+            {[["/about", "About"], ["/departments", "Departments"], ["/doctors", "Doctors"], ["/services", "Services"], ["/education", "Education"]].map(([to, label]) => (
               <li key={to}><Link to={to as string} className="hover:text-primary">{label}</Link></li>
             ))}
           </ul>
@@ -40,7 +51,7 @@ export function Footer() {
         <div>
           <h4 className="font-display text-sm font-semibold">Support Us</h4>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            {[["/donate","Donate Us"],["/donate","Give Zakat"],["/donate","Sadqah"],["/careers","Careers"],["/news","Stories"]].map(([to,label], i) => (
+            {[["/donate", "Donate Us"], ["/donate", "Give Zakat"], ["/donate", "Sadqah"], ["/careers", "Careers"], ["/news", "Stories"]].map(([to, label], i) => (
               <li key={i}><Link to={to as string} className="hover:text-primary">{label}</Link></li>
             ))}
           </ul>
@@ -65,6 +76,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 }
