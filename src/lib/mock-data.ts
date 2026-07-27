@@ -144,6 +144,7 @@ export const DEPARTMENTS: Department[] = [
       "Portable X-ray Machines",
       "Specialized Surgical Equipment",
     ],
+    image: "/departments/cardiac.jpg",
   },
   {
     slug: "dermatology",
@@ -207,6 +208,7 @@ export const DEPARTMENTS: Department[] = [
       "Cryosurgery Equipment",
       "Electrocautery Equipment",
     ],
+    image: "/departments/dermatology.jpg",
   },
   {
     slug: "endocrinology",
@@ -256,6 +258,7 @@ export const DEPARTMENTS: Department[] = [
       "Trained Endocrinologists and Nursing Staff",
     ],
     equipment: [],
+    image: "/departments/endocrinology.jpg",
   },
   {
     slug: "ent",
@@ -311,6 +314,7 @@ export const DEPARTMENTS: Department[] = [
       "Modern Diagnostic Support",
     ],
     equipment: [],
+    image: "/departments/ent.jpg",
   },
   {
     slug: "gastroenterology",
@@ -372,6 +376,7 @@ export const DEPARTMENTS: Department[] = [
       "Multidisciplinary Collaboration with Oncology, Interventional Radiology, and Surgery",
     ],
     equipment: [],
+    image: "/departments/gastroentrology.jpg",
   },
   {
     slug: "general-surgery",
@@ -424,6 +429,7 @@ export const DEPARTMENTS: Department[] = [
       "OPD Six Days a Week",
     ],
     equipment: [],
+    image: "/departments/general-surgery.jpg",
   },
   {
     slug: "medicine",
@@ -473,6 +479,7 @@ export const DEPARTMENTS: Department[] = [
       "FCPS Medicine and IMM General Medicine Postgraduate Training Programs",
     ],
     equipment: [],
+    image: "/departments/general-medicine.jpg",
   },
   {
     slug: "obstetrics-gynaecology",
@@ -526,6 +533,7 @@ export const DEPARTMENTS: Department[] = [
       "FCPS Training Unit",
     ],
     equipment: [],
+    image: "/departments/obstetrics.jpg",
   },
   {
     slug: "medical-icu",
@@ -588,6 +596,7 @@ export const DEPARTMENTS: Department[] = [
       "Portable Ultrasound",
       "Portable Echocardiography",
     ],
+    image: "/departments/medical-icu.jpg",
   },
   {
     slug: "nephrology",
@@ -652,6 +661,7 @@ export const DEPARTMENTS: Department[] = [
       "Separate Dialysis Cabins for Hepatitis B and C Positive Patients",
     ],
     equipment: [],
+    image: "/departments/nephrology.jpg",
   },
   {
     slug: "neurosurgery",
@@ -698,6 +708,7 @@ export const DEPARTMENTS: Department[] = [
       "Outpatient Services",
     ],
     equipment: [],
+    image: "/departments/neuro.jpg",
   },
   {
     slug: "ophthalmology",
@@ -766,6 +777,7 @@ export const DEPARTMENTS: Department[] = [
       "Argon Laser",
       "YAG Laser",
     ],
+    image: "/departments/ophthalmology.jpg",
   },
   {
     slug: "orthopaedics",
@@ -815,6 +827,7 @@ export const DEPARTMENTS: Department[] = [
       "Foreign-Qualified Faculty Supervision",
     ],
     equipment: [],
+    image: "/departments/orthopedic.jpg",
   },
   {
     slug: "paediatrics",
@@ -882,6 +895,7 @@ export const DEPARTMENTS: Department[] = [
       "Radiant Warmers",
       "Phototherapy Units",
     ],
+    image: "/departments/pediatrics.jpg",
   },
   {
     slug: "psychiatry",
@@ -933,6 +947,7 @@ export const DEPARTMENTS: Department[] = [
       "Teaching Classroom and Library",
     ],
     equipment: [],
+    image: "/departments/psychiatry.jpg",
   },
   {
     slug: "pulmonology",
@@ -1009,6 +1024,7 @@ export const DEPARTMENTS: Department[] = [
       "Interventional Pulmonology Unit (established November 2023)",
     ],
     equipment: [],
+    image: "/departments/pulmonology.jpg",
   },
   {
     slug: "radiology",
@@ -1064,6 +1080,7 @@ export const DEPARTMENTS: Department[] = [
       "Ultrasound (Doppler, Transvaginal)",
       "Mammography Unit",
     ],
+    image: "/departments/radiology.jpg",
   },
   {
     slug: "physiotherapy",
@@ -1118,6 +1135,7 @@ export const DEPARTMENTS: Department[] = [
       "Balance Trainers",
       "Automated Traction System",
     ],
+    image: "/departments/physiotherapy.jpg",
   },
   {
     slug: "rheumatology",
@@ -1157,6 +1175,7 @@ export const DEPARTMENTS: Department[] = [
     equipment: [
       "Musculoskeletal Ultrasound",
     ],
+    image: "/departments/rheumatology.jpg",
   },
   {
     slug: "surgical-icu",
@@ -1183,6 +1202,7 @@ export const DEPARTMENTS: Department[] = [
       "Portable Ultrasound",
       "Centralized Oxygen and Suction Supply",
     ],
+    image: "/departments/surgical-icu.jpg",
   },
   {
     slug: "thoracic-surgery",
@@ -1220,6 +1240,7 @@ export const DEPARTMENTS: Department[] = [
       "Well-Maintained Inpatient Wards",
     ],
     equipment: [],
+    image: "/departments/thoracic-surgery.jpg",
   },
   {
     slug: "urology",
@@ -1265,6 +1286,7 @@ export const DEPARTMENTS: Department[] = [
       "Fully Equipped Operation Theatre",
     ],
     equipment: [],
+    image: "/departments/urology.jpg",
   },
   {
     slug: "pathology",
@@ -1320,61 +1342,7 @@ export const DEPARTMENTS: Department[] = [
       "WHO-Endorsed TB Testing",
     ],
     equipment: [],
-  },
-  {
-    slug: "pathology",
-    name: "Pathology",
-    icon: "Microscope",
-    short: "Comprehensive diagnostic laboratory services including histopathology, haematology, chemical pathology, microbiology, and blood bank.",
-    description: "Gulab Devi Teaching Hospital's Laboratory is a vital diagnostic unit dedicated to supporting high quality patient care through reliable, timely, and accurate laboratory testing. Equipped with modern technology and staffed by qualified professionals, the laboratory plays a central role in disease diagnosis, treatment monitoring, and preventive healthcare across all medical and surgical specialties. Strict quality control and safety standards are followed to ensure dependable results for clinicians and patients alike.\n\nThe laboratory functions as a comprehensive diagnostic center, integrating hematology, biochemistry, microbiology, blood bank services, histopathology, cytology, and specialized tuberculosis diagnostics within a coordinated system. Established diagnostic facilities have evolved over the years with upgraded equipment, advanced testing capabilities, and adherence to recognized quality protocols.\n\nHistopathology services, strengthened by the introduction of immunohistochemistry, support accurate tissue diagnosis and cancer detection, while the purpose-built tuberculosis laboratory operates as a Biosafety Level 2 facility providing WHO-endorsed testing in collaboration with provincial TB programs. Regular external quality assurance ensures standardized and reliable diagnostic practices.",
-    heads: [
-      {
-        name: "Prof. Dr. Rajia Liaqat",
-        qualifications: "Head of Department (Pathology)",
-        photo: "/departments/pathology/rajia-liaqat.jpg",
-      },
-      {
-        name: "Prof. Dr. Atiqa Ambreem",
-        qualifications: "Head of Department (Microbiology)",
-        photo: "/departments/pathology/atiqa-ambreem.jpg",
-      },
-    ],
-    consultants: [
-      {
-        name: "Dr. Muhammad Masood Afzal",
-        qualifications: "Assistant Professor",
-        photo: "/departments/pathology/muhammad-masood-afzal.jpg",
-      },
-      {
-        name: "Dr. Sheeba Ishtiaq",
-        qualifications: "Associate Professor",
-        photo: "/departments/pathology/sheeba-ishtiaq.jpg",
-      },
-      {
-        name: "Prof. Dr. Rajia Liaqat",
-        qualifications: "Professor",
-        photo: "/departments/pathology/rajia-liaqat.jpg",
-      },
-    ],
-    stats: [
-      { label: "Clinical/Pathology Tests", value: "513,000+" },
-      { label: "Histopathological Tests", value: "7,000+" },
-      { label: "Microbiological Tests", value: "43,000+" },
-      { label: "ABGs", value: "14,000+" },
-    ],
-    services: [
-      "Histopathology",
-      "Haematology",
-      "Chemical Pathology",
-      "Microbiology",
-      "Blood Bank",
-    ],
-    facilities: [
-      "Biosafety Level 2 Tuberculosis Laboratory",
-      "Immunohistochemistry",
-      "WHO-Endorsed TB Testing",
-    ],
-    equipment: [],
+    image: "/departments/pathology.jpg",
   },
 ];
 
